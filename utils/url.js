@@ -1,1 +1,1 @@
-export const base_url = process.env.NODE_ENV === "production" ? "https://next-github-api-git-master.jrivera2850.vercel.app" : "http://localhost:3000"
+export const base_url = process.env.NODE_ENV === "production" ? "next-github-api-9vw687g0b.vercel.app" : "http://localhost:3000"
