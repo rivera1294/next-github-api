@@ -28,7 +28,7 @@ const Home = (props) => {
                 <StatLabel>
                   <Text fontSize="xl">Github Stars</Text>
                 </StatLabel>
-                <StatNumber>{props.data.stars}</StatNumber>
+                {/* <StatNumber>{props.data.stars}</StatNumber> */}
               </Stat>
             </Box>
             <Box w="300px" p={5} ml={8} mb={3} borderWidth="1px" rounded="lg" overflow="hidden">
@@ -36,7 +36,7 @@ const Home = (props) => {
                 <StatLabel>
                   <Text fontSize="xl">Github Followers</Text>
                 </StatLabel>
-                <StatNumber>{props.data.followers}</StatNumber>
+                {/* <StatNumber>{props.data.followers}</StatNumber> */}
               </Stat>
             </Box>
           </Box>
@@ -46,15 +46,17 @@ const Home = (props) => {
   )
 }
 
-export async function getStaticProps() {
-  const res = await fetch(`${base_url}/api/github`)
-  const data = await res.json()
+// export async function getStaticProps() {
+//   console.log('node', process.env.NODE_ENV)
+//   console.log('bae', base_url)
+//   const res = await fetch(`${base_url}/api/github`)
+//   const data = await res.json()
 
-  return {
-    props: {
-      data,
-    },
-  }
-}
+//   return {
+//     props: {
+//       data,
+//     },
+//   }
+// }
 
 export default Home
