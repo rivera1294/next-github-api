@@ -13,5 +13,8 @@ export default async (req, res) => {
     return acc + item.stargazers_count
   }, 0)
 
-  return res.status(200).json({ stars: starsCount, followers: followerCount });
+  const reposStarred = await octokit.request("/users/rivera1294/starred");
+  const starredCount = reposStarred.data.length;
+
+  return res.status(200).json({ stars: starsCount, followers: followerCount, starred: starredCount });
 };
